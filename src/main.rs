@@ -81,16 +81,12 @@ fn main(){
 
     for message in bus_receiver.iter() {
         match message.parse(){
-            gst::Message::ErrorParsed{ref error, ref debug, ..} => {
-                println!("ERROR GSTREAMER `{}`: {}, {}", message.src_name(), error.message(), debug);
-                // break; // Decide if we want to quit
+            gst::Message::ErrorParsed{ref error, ..} => {
+                println!("ERROR GSTREAMER {}", error.message());
             }
             gst::Message::Eos(_) => {
                 println!("INFO PLAYBACK stopped");
             }
-            // gst::Message::StateChangedParsed{ref old, ref new, ..} => {
-            //     println!("element `{}` changed from {:?} to {:?}", message.src_name(), old, new);
-            // }
             _ => {
                 // println!("msg of type `{}` from element `{}`", message.type_name(), message.src_name());
             }
