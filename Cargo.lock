@@ -2,13 +2,13 @@
 name = "remote-player"
 version = "0.1.0"
 dependencies = [
- "gstreamer 0.6.333 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gstreamer 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "gstreamer"
-version = "0.6.333"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [metadata]
-"checksum gstreamer 0.6.333 (registry+https://github.com/rust-lang/crates.io-index)" = "d3c0ae52699e71c919bd82fc263188d5f4f2b4738f9ba8076e36f4348510b984"
+"checksum gstreamer 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "e64aa92ef8098be6cc02af604a97f86a68b9265cf51cafd6d850dccba639af19"

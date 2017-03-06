@@ -62,7 +62,7 @@ fn player_loop(mut playbin : gst::PlayBin) {
             }
         }
     }
-
+    println!("INFO EOF quitting");
     // Exit on EOF
     std::process::exit(1);
 }
@@ -83,6 +83,7 @@ fn main(){
         match message.parse(){
             gst::Message::ErrorParsed{ref error, ..} => {
                 println!("ERROR GSTREAMER {}", error.message());
+                break
             }
             gst::Message::Eos(_) => {
                 println!("INFO PLAYBACK stopped");

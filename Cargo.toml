@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["Per-Victor Persson <dracyr@gmail.com>"]
 
 [dependencies]
-gstreamer = "0.6.4"
+gstreamer = "0.7.0"
